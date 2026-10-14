@@ -131,7 +131,7 @@ class HRExpense(models.Model):
                 float_compare(
                     advance.amount_commit,
                     0.0,
-                    precision_rounding=2,
+                    precision_digits=2,
                 )
                 != 1
             ):
@@ -143,7 +143,7 @@ class HRExpense(models.Model):
                 float_compare(
                     origin_clearing_amount,
                     0.0,
-                    precision_rounding=2,
+                    precision_digits=2,
                 )
                 == 1
             ):
@@ -152,7 +152,7 @@ class HRExpense(models.Model):
                     float_compare(
                         advance.amount_commit,
                         0.0,
-                        precision_rounding=2,
+                        precision_digits=2,
                     )
                     != 1
                 ):
